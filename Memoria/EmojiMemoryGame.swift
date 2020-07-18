@@ -8,9 +8,9 @@
 
 import SwiftUI
 
-class EmojiMemoryGame {
+class EmojiMemoryGame: ObservableObject {
     //    private(set) var model: MemoryGame<String> (Crystal door example)
-    private var model: MemoryGame<String> = createMemoryGame()
+    @Published private var model: MemoryGame<String> = createMemoryGame()
     
     // MARK: - Access to the Model
     
