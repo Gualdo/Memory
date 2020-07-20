@@ -17,8 +17,8 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         var content: CardContent
     }
     
-    var cards: [Card]
-    var indexOfTheOneAndOnlyFaceUpCard: Int? {
+    private(set) var cards: [Card]
+    private var indexOfTheOneAndOnlyFaceUpCard: Int? {
         get { cards.indices.filter { cards[$0].isFaceUp }.only }
         set {
             for index in cards.indices {

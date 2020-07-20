@@ -26,8 +26,8 @@ class EmojiMemoryGame: ObservableObject {
     
     // MARK: - Static Functions
     
-    static func createMemoryGame() -> MemoryGame<String> {
-        let emojis = ["👻", "🎃", "🕷", "☠️", "👹", "👽", "🧟‍♂️", "🕸", "💀"]
+    private static func createMemoryGame() -> MemoryGame<String> {
+        let emojis = ["👻", "🎃", "🕷", "☠️", "👹", "🧟‍♂️", "🕸", "💀", "🦇"]
         return MemoryGame<String>(numberOfPairsOfCards: emojis.count) { pairIndex in emojis[pairIndex] }
     }
 }
