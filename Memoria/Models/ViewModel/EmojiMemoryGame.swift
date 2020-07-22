@@ -24,10 +24,15 @@ class EmojiMemoryGame: ObservableObject {
         model.choose(card: card)
     }
     
+    func resetGame() {
+        model = EmojiMemoryGame.createMemoryGame()
+    }
+    
     // MARK: - Static Functions
     
     private static func createMemoryGame() -> MemoryGame<String> {
-        let emojis = ["👻", "🎃", "🕷", "☠️", "👹", "🧟‍♂️", "🕸", "💀", "🦇"]
-        return MemoryGame<String>(numberOfPairsOfCards: emojis.count) { pairIndex in emojis[pairIndex] }
+//        let emojis = ["👻", "🎃", "🕷", "☠️", "👹", "🧟‍♂️", "🕸", "💀", "🦇"] // 9 Pairs
+        let emojis = ["👻", "🎃", "🕷"] // 3 Pairs
+        return MemoryGame<String>(numberOfPairsOfCards: emojis.count) { pairIndex in return emojis[pairIndex] }
     }
 }
