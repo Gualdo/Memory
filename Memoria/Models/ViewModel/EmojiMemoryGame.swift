@@ -31,8 +31,12 @@ class EmojiMemoryGame: ObservableObject {
     // MARK: - Static Functions
     
     private static func createMemoryGame() -> MemoryGame<String> {
-//        let emojis = ["👻", "🎃", "🕷", "☠️", "👹", "🧟‍♂️", "🕸", "💀", "🦇"] // 9 Pairs
-        let emojis = ["👻", "🎃", "🕷"] // 3 Pairs
+//        let emojis = ["👻", "🎃", "🕷"] // 3 Pairs
+        let emojis = ["👻", "🎃", "🕷", "☠️"] // 4 Pairs
+//        let emojis = ["👻", "🎃", "🕷", "☠️", "👹"] // 5 Pairs
+//        let emojis = ["👻", "🎃", "🕷", "☠️", "👹", "🧟‍♂️"] // 6 Pairs
+//        let emojis = ["👻", "🎃", "🕷", "☠️", "👹", "🧟‍♂️", "🕸"] // 7 Pairs
+//        let emojis = ["👻", "🎃", "🕷", "☠️", "👹", "🧟‍♂️", "🕸", "🦇"] // 8 Pairs
         return MemoryGame<String>(numberOfPairsOfCards: emojis.count) { pairIndex in return emojis[pairIndex] }
     }
 }
